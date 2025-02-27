@@ -8,6 +8,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 body {
@@ -294,8 +295,57 @@ button {
   grid-gap: 10px;
 }
 
-/* Mobile View */
+/* For larger desktops */
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* For tablets */
+@media (max-width: 992px) {
+  html {
+    font-size: 15px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .grid2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .contentWidth {
+    width: 100%;
+  }
+  
+  .category {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .btn-primary {
+    padding: 12px 30px;
+  }
+  
+  .top {
+    margin-top: 60px;
+  }
+  
+  .mtop {
+    margin-top: 30px;
+  }
+}
+
+/* For mobile devices */
 @media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
   .d_flex, .c_flex {
     flex-direction: column;
     text-align: center;
@@ -303,6 +353,7 @@ button {
 
   .grid {
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
   }
 
   .grid2 {
@@ -316,5 +367,77 @@ button {
 
   .btn-primary {
     padding: 10px 20px;
+  }
+  
+  .row {
+    width: 100%;
+  }
+  
+  .icon-circle {
+    margin: 10px auto;
+  }
+  
+  .heading .heading-left h2 {
+    font-size: 22px;
+  }
+  
+  .control-btn .next,
+  .control-btn .prev {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+  }
+}
+
+/* For smaller mobile devices */
+@media (max-width: 576px) {
+  html {
+    font-size: 13px;
+  }
+  
+  .container {
+    max-width: 95%;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 15px;
+  }
+  
+  .product {
+    margin: 5px;
+    padding: 15px;
+  }
+  
+  .product h3 {
+    font-size: 15px;
+  }
+  
+  .heading .heading-left h2 {
+    font-size: 20px;
+  }
+  
+  .heading .heading-left i {
+    font-size: 25px;
+  }
+  
+  .control-btn .next,
+  .control-btn .prev {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+  
+  .btn-primary {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+  
+  .top {
+    margin-top: 40px;
+  }
+  
+  .mtop {
+    margin-top: 20px;
   }
 }
